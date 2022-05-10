@@ -8,25 +8,25 @@
 <meta name="author" content="Genesys">
 
     <link rel="icon" href="https://developer.genesys.com/wp-content/uploads/2020/07/Genesys_Favicon.ico" type="image/x-icon" />
-    <title>First Lesson :: Documentation for Hugo Learn Theme</title>
+    <title>First Steps :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="../css/nucleus.css?1651161587" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1651161587" rel="stylesheet">
-    <link href="../css/hybrid.css?1651161587" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1651161587" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1651161587" rel="stylesheet">
-    <link href="../css/auto-complete.css?1651161587" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1651161587" rel="stylesheet">
-    <link href="../css/theme.css?1651161587" rel="stylesheet">
-    <link href="../css/tabs.css?1651161587" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1651161587" rel="stylesheet">
+    <link href="../css/nucleus.css?1652192591" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1652192591" rel="stylesheet">
+    <link href="../css/hybrid.css?1652192591" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1652192591" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1652192591" rel="stylesheet">
+    <link href="../css/auto-complete.css?1652192591" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1652192591" rel="stylesheet">
+    <link href="../css/theme.css?1652192591" rel="stylesheet">
+    <link href="../css/tabs.css?1652192591" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1652192591" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1651161587" rel="stylesheet">
+    <link href="../css/theme-mine.css?1652192591" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1651161587"></script>
+    <script src="../js/jquery-3.3.1.min.js?1652192591"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1651161587"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1651161587"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1652192591"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1652192591"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1651161587"></script>
+<script type="text/javascript" src="../js/search.js?1652192591"></script>
 
     
   </div>
@@ -133,9 +133,9 @@
  
   
     
-      <li data-nav-id="/020-getting-started/10_first.html" title="First Lesson" class="dd-item active">
+      <li data-nav-id="/020-getting-started/10_first.html" title="First Steps" class="dd-item active">
         <a href="../020-getting-started/10_first.html">
-        First Lesson
+        First Steps
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -154,9 +154,30 @@
  
   
     
-      <li data-nav-id="/020-getting-started/20_second.html" title="Second Lesson" class="dd-item ">
+      <li data-nav-id="/020-getting-started/20_second.html" title="Update code and Launch the app" class="dd-item ">
         <a href="../020-getting-started/20_second.html">
-        Second Lesson
+        Update code and Launch the app
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/020-getting-started/30_third.html" title="Embedding the app" class="dd-item ">
+        <a href="../020-getting-started/30_third.html">
+        Embedding the app
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -317,7 +338,7 @@
             
           
           
-            <a href='../'>Genesys Workshop</a> > <a href='../020-getting-started.html'>Getting Started</a> > First Lesson
+            <a href='../'>Genesys Workshop</a> > <a href='../020-getting-started.html'>Getting Started</a> > First Steps
           
         
           
@@ -332,7 +353,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#configure-workshop">Configure Workshop</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#create-an-oauth-client">Create an OAuth Client</a></li>
+    <li><a href="#download-the-source-code">Download the source code</a></li>
   </ul>
 </nav>
     </div>
@@ -350,25 +373,41 @@
           
             <h1>
               
-              First Lesson
+              First Steps
             </h1>
           
 
         
 
 
-<h2 id="configure-workshop">Configure Workshop</h2>
-<ol>
-<li>
-<p>Step one</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+<li>Git</li>
+<li>Genesys Cloud organization</li>
+</ul>
+<h2 id="create-an-oauth-client">Create an OAuth Client</h2>
+<p>The website will use Genesys Cloud OAuth to authenticate users so you first need to create a new OAuth <code>implicit grant</code> client id/secret in your Genesys Cloud organization.</p>
+<ul>
+<li>Open Genesys Cloud, go to <code>Admin</code> and click on <code>OAuth</code> (under <code>Integrations</code>)</li>
+<li>Click on <code>Add Client</code></li>
+<li>Give your app a name (e.g. <code>GDPR Requests</code>). Description is optional.</li>
+<li>Select <code>Token Implicit Grant (Browser)</code></li>
+<li>Enter <code>http://localhost:3000</code> as the <code>Redirect URI</code></li>
+<li>In the <code>Scope</code> section, select <code>gdpr</code> and <code>gdpr:readonly</code></li>
+<li>Click <code>Save</code> and note the <code>Client ID</code> string value</li>
+</ul>
+<h2 id="download-the-source-code">Download the source code</h2>
+<ul>
+<li>Run <code>git clone https://github.com/PierrickI3/genesyscloud-gdpr-requests</code> to get the latest code</li>
+<li>Use vscode to open the files:
+<ul>
+<li><code>cd genesyscloud-gdpr-requests</code></li>
+<li><code>code .</code></li>
+</ul>
 </li>
-<li>
-<p>Step two</p>
-</li>
-<li>
-<p>Step three</p>
-</li>
-</ol>
+</ul>
+<p>Next, go to <a href="20_second.html">Update code and Launch the app</a> to launch the app locally.</p>
 
 
 <footer class="footline">
@@ -469,6 +508,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -500,7 +555,7 @@
 			<a class="nav nav-prev" href="../020-getting-started.html" title="Getting Started"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../020-getting-started/20_second.html" title="Second Lesson" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../020-getting-started/20_second.html" title="Update code and Launch the app" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -510,19 +565,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1651161587"></script>
-    <script src="../js/perfect-scrollbar.min.js?1651161587"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1651161587"></script>
-    <script src="../js/jquery.sticky.js?1651161587"></script>
-    <script src="../js/featherlight.min.js?1651161587"></script>
-    <script src="../js/highlight.pack.js?1651161587"></script>
+    <script src="../js/clipboard.min.js?1652192591"></script>
+    <script src="../js/perfect-scrollbar.min.js?1652192591"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1652192591"></script>
+    <script src="../js/jquery.sticky.js?1652192591"></script>
+    <script src="../js/featherlight.min.js?1652192591"></script>
+    <script src="../js/highlight.pack.js?1652192591"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1651161587"></script>
-    <script src="../js/learn.js?1651161587"></script>
-    <script src="../js/hugo-learn.js?1651161587"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1652192591"></script>
+    <script src="../js/learn.js?1652192591"></script>
+    <script src="../js/hugo-learn.js?1652192591"></script>
     
         
-            <script src="../mermaid/mermaid.js?1651161587"></script>
+            <script src="../mermaid/mermaid.js?1652192591"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

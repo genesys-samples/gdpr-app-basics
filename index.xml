@@ -7,27 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First Lesson</title>
+      <title>First Steps</title>
       <link>/020-getting-started/10_first.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/020-getting-started/10_first.html</guid>
-      <description>Configure Workshop   Step one
-  Step two
-  Step three
-  </description>
+      <description>Requirements  Visual Studio Code Git Genesys Cloud organization  Create an OAuth Client The website will use Genesys Cloud OAuth to authenticate users so you first need to create a new OAuth implicit grant client id/secret in your Genesys Cloud organization.
+ Open Genesys Cloud, go to Admin and click on OAuth (under Integrations) Click on Add Client Give your app a name (e.g. GDPR Requests). Description is optional. Select Token Implicit Grant (Browser) Enter http://localhost:3000 as the Redirect URI In the Scope section, select gdpr and gdpr:readonly Click Save and note the Client ID string value  Download the source code  Run git clone https://github.</description>
     </item>
     
     <item>
-      <title>Second Lesson</title>
+      <title>Update code and Launch the app</title>
       <link>/020-getting-started/20_second.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/020-getting-started/20_second.html</guid>
-      <description>Advanced Lesson   Step one
-  Step two
-  Step three
-  </description>
+      <description>Update the app configuration  Open the /static/js/genesyscloud.js file Set the clientId, redirectUrl and environment constants to the values you got from Genesys Cloud earlier, e.g.:  const clientId = &amp;#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;; const redirectUrl = &amp;#34;http://localhost&amp;#34;; const environment = &amp;#34;mypurecloud.ie&amp;#34;; // Your Genesys Cloud environment (e.g. mypurecloud.com, mypurecloud.de) Find your environment here
+Launch the app  Install the Live Server extension in Visual Studio Code Make sure the index.html file is open in the editor Click on Go Live to start a local web server  You should be able to see the following page:</description>
+    </item>
+    
+    <item>
+      <title>Embedding the app</title>
+      <link>/020-getting-started/30_third.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/020-getting-started/30_third.html</guid>
+      <description>Publishing your app The app is now ready to be used within Genesys Cloud. There are several ways to use it:
+Using localhost This is what you have been doing so far. You can keep the app running locally and use it to your Genesys Cloud organization however it will only work from your own computer.
+Using your own domain You can copy the source code in your own web server(s).</description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@
 <meta name="author" content="Genesys">
 
     <link rel="icon" href="https://developer.genesys.com/wp-content/uploads/2020/07/Genesys_Favicon.ico" type="image/x-icon" />
-    <title>Update code and Launch the app :: Documentation for Hugo Learn Theme</title>
+    <title>Embedding the app :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="../css/nucleus.css?1652192591" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../020-getting-started/20_second.html">
+  <body class="" data-url="../020-getting-started/30_third.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -154,7 +154,7 @@
  
   
     
-      <li data-nav-id="/020-getting-started/20_second.html" title="Update code and Launch the app" class="dd-item active">
+      <li data-nav-id="/020-getting-started/20_second.html" title="Update code and Launch the app" class="dd-item ">
         <a href="../020-getting-started/20_second.html">
         Update code and Launch the app
         <i class="fas fa-check read-icon"></i>
@@ -175,7 +175,7 @@
  
   
     
-      <li data-nav-id="/020-getting-started/30_third.html" title="Embedding the app" class="dd-item ">
+      <li data-nav-id="/020-getting-started/30_third.html" title="Embedding the app" class="dd-item active">
         <a href="../020-getting-started/30_third.html">
         Embedding the app
         <i class="fas fa-check read-icon"></i>
@@ -264,7 +264,7 @@
                   
                     
                     
-                      <option id="en" value="/020-getting-started/20_second.html" selected>English</option>
+                      <option id="en" value="/020-getting-started/30_third.html" selected>English</option>
                     
                   
               
@@ -338,7 +338,7 @@
             
           
           
-            <a href='../'>Genesys Workshop</a> > <a href='../020-getting-started.html'>Getting Started</a> > Update code and Launch the app
+            <a href='../'>Genesys Workshop</a> > <a href='../020-getting-started.html'>Getting Started</a> > Embedding the app
           
         
           
@@ -353,13 +353,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#update-the-app-configuration">Update the app configuration</a></li>
-    <li><a href="#launch-the-app">Launch the app</a></li>
-    <li><a href="#how-to-use-the-app">How to use the app</a>
+    <li><a href="#publishing-your-app">Publishing your app</a>
       <ul>
-        <li><a href="#starting-a-new-request">Starting a new request</a></li>
+        <li><a href="#using-localhost">Using localhost</a></li>
+        <li><a href="#using-your-own-domain">Using your own domain</a></li>
+        <li><a href="#github-pages">Github pages</a></li>
       </ul>
     </li>
+    <li><a href="#embed-the-app-in-your-organization">Embed the app in your organization</a></li>
   </ul>
 </nav>
     </div>
@@ -377,54 +378,46 @@
           
             <h1>
               
-              Update code and Launch the app
+              Embedding the app
             </h1>
           
 
         
 
 
-<h2 id="update-the-app-configuration">Update the app configuration</h2>
+<h2 id="publishing-your-app">Publishing your app</h2>
+<p>The app is now ready to be used within Genesys Cloud. There are several ways to use it:</p>
+<h3 id="using-localhost">Using localhost</h3>
+<p>This is what you have been doing so far. You can keep the app running locally and use it to your Genesys Cloud organization however <strong>it will only work from your own computer</strong>.</p>
+<h3 id="using-your-own-domain">Using your own domain</h3>
+<p>You can copy the source code in your own web server(s). Make sure the app can be reached via a publicly accessible URL (e.g. <code>https://mydomain.com/gdpr-requests</code>).</p>
+<h3 id="github-pages">Github pages</h3>
+<p>You can host this static web site using Github Pages if you have a Github Account. This is practical because it will give you a free <code>https</code> URL The credentials in <code>static/js/genesyscloud.js</code> are not critical as it requires anyone who uses it to also enter their username and password to authenticate.</p>
+<p>A sample page is available <a href="https://github.com/purecloudgdprrequests/purecloudgdprrequests.github.io">here</a>. In this case, the <code>Authorized redirect URI</code> is <code>https://purecloudgdprrequests.github.io/index.html</code></p>
+<h2 id="embed-the-app-in-your-organization">Embed the app in your organization</h2>
+<p>To embed your web site directly inside PureCloud, you need to create a new <code>Integration</code></p>
 <ul>
-<li>Open the <code>/static/js/genesyscloud.js</code> file</li>
-<li>Set the <code>clientId</code>, <code>redirectUrl</code> and <code>environment</code> constants to the values you got from Genesys Cloud earlier, e.g.:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">clientId</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">redirectUrl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://localhost&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">environment</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mypurecloud.ie&#34;</span>; <span style="color:#75715e">// Your Genesys Cloud environment (e.g. mypurecloud.com, mypurecloud.de)
-</span></span></span></code></pre></div><p>Find your environment <a href="https://developer.genesys.cloud/platform/api/">here</a></p>
-<h2 id="launch-the-app">Launch the app</h2>
+<li>Go to <code>Admin/Integrations</code> and click on <code>+Integrations</code> on the top right to add a new client application</li>
+<li>In the <code>Details</code> tab:
 <ul>
-<li>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> extension in Visual Studio Code</li>
-<li>Make sure the <code>index.html</code> file is open in the editor</li>
-<li>Click on <code>Go Live</code> to start a local web server</li>
-</ul>
-<p>You should be able to see the following page:</p>
-<p><img src="../images/app_first_launch.jpg" alt="First launch"></p>
-<h2 id="how-to-use-the-app">How to use the app</h2>
-<h3 id="starting-a-new-request">Starting a new request</h3>
-<ul>
-<li>Click on the <code>New Request</code> button</li>
-<li>Select the request type
-<ul>
-<li><code>Delete</code> will anonymize a user&rsquo;s <a href="https://en.wikipedia.org/wiki/Personal_data">PII</a></li>
-<li><code>Export</code> will export a user&rsquo;s activities within Genesys Cloud. The exported file is a set of CSV and JSON files.</li>
-<li><code>Update</code> will update a user&rsquo;s details throughout Genesys Cloud.</li>
+<li>Enter a name for the new client application</li>
 </ul>
 </li>
-<li>Enter a name, an address, a phone number or an email address. Only one of these fields is required but you can enter as many as you like to find the right person.</li>
-<li>Click on <code>Search</code></li>
-<li>Click on <code>Select and Submit</code> after you have identified the correct person</li>
-</ul>
-<p><img src="../images/app_search_subject.jpg" alt="Search Subject"></p>
+<li>In the <code>Configuration</code> tab, enter the following:
 <ul>
-<li>If the request succeeds, you should now see the following:</li>
+<li>Application URL: The full path to your site home page (e.g. <a href="https://purecloudgdprrequests.github.io">https://purecloudgdprrequests.github.io</a>)</li>
+<li>Application Type: widget</li>
+<li>Application Category: (leave empty)</li>
+<li>Iframe Sandbox Options: allow-scripts,allow-same-origin,allow-forms,allow-modals (default value)</li>
+<li>Group Filtering: Select a group of users who can access this client application. You might have to create a new group first in <code>Admin/Groups</code></li>
+<li>Click on <code>Save</code></li>
 </ul>
-<p><img src="../images/app_searching.jpg" alt="Searching"></p>
-<ul>
-<li>Requests typically take between 24h and 48h to be processed. You can check the status of your request by refreshing the page.</li>
+</li>
+<li>Go back to the <code>Details</code> tab and click on <code>Active</code> to activate this application</li>
 </ul>
-<p>Next, go to <a href="30_third.html">Embedding the app</a> to embed this app in your own Genesys Cloud organization.</p>
+<p>You might need to logout and log back in to view the app inside the <code>Apps</code> section on the left side.</p>
+<p><img src="../images/app_icons.jpg" alt="Embedded app"></p>
+<p>Jump to the <a href="../090-Conclution/_index.html">Conclusion</a> section to read what you have achieved.</p>
 
 
 <footer class="footline">
@@ -510,7 +503,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -527,8 +519,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -548,6 +538,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -569,10 +562,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../020-getting-started/10_first.html" title="First Steps"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../020-getting-started/20_second.html" title="Update code and Launch the app"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../020-getting-started/30_third.html" title="Embedding the app" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../090-conclution.html" title="Conclusion" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

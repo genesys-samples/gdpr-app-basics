@@ -8,38 +8,45 @@
 },
 {
 	"uri": "/020-getting-started/10_first.html",
-	"title": "First Lesson",
+	"title": "First Steps",
 	"tags": [],
 	"description": "",
-	"content": "Configure Workshop   Step one\n  Step two\n  Step three\n  "
+	"content": "Requirements  Visual Studio Code Git Genesys Cloud organization  Create an OAuth Client The website will use Genesys Cloud OAuth to authenticate users so you first need to create a new OAuth implicit grant client id/secret in your Genesys Cloud organization.\n Open Genesys Cloud, go to Admin and click on OAuth (under Integrations) Click on Add Client Give your app a name (e.g. GDPR Requests). Description is optional. Select Token Implicit Grant (Browser) Enter http://localhost:3000 as the Redirect URI In the Scope section, select gdpr and gdpr:readonly Click Save and note the Client ID string value  Download the source code  Run git clone https://github.com/PierrickI3/genesyscloud-gdpr-requests to get the latest code Use vscode to open the files:  cd genesyscloud-gdpr-requests code .    Next, go to Update code and Launch the app to launch the app locally.\n"
 },
 {
 	"uri": "/010-introduction.html",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Genesys Workshop Series Introduction Welcome In this workshop, you will learn\u0026hellip;\n This workshop is focused on things one, two and three.\n Learning Objectives  Master this Configure that Integrate this  "
+	"content": "Genesys Cloud GDPR Client Application Introduction Welcome In this workshop, you will learn how to create your a GDPR client application and embed it into your own Genesys Cloud organization.\n This workshop uses existing source code of an application that was previously created to demonstrate GDPR requests.\n Learning Objectives  Create a local website to process GDPR requests Embed the application into your Genesys Cloud organization  "
 },
 {
 	"uri": "/020-getting-started.html",
 	"title": "Getting Started",
 	"tags": [],
 	"description": "",
-	"content": "Getting Started  First Lesson   Second Lesson   "
+	"content": "Getting Started This is what the app will look like once embedded in your Genesys Cloud organization:\nClick on the First Steps to get started.\n"
 },
 {
 	"uri": "/020-getting-started/20_second.html",
-	"title": "Second Lesson",
+	"title": "Update code and Launch the app",
 	"tags": [],
 	"description": "",
-	"content": "Advanced Lesson   Step one\n  Step two\n  Step three\n  "
+	"content": "Update the app configuration  Open the /static/js/genesyscloud.js file Set the clientId, redirectUrl and environment constants to the values you got from Genesys Cloud earlier, e.g.:  const clientId = \u0026#34;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\u0026#34;; const redirectUrl = \u0026#34;http://localhost\u0026#34;; const environment = \u0026#34;mypurecloud.ie\u0026#34;; // Your Genesys Cloud environment (e.g. mypurecloud.com, mypurecloud.de) Find your environment here\nLaunch the app  Install the Live Server extension in Visual Studio Code Make sure the index.html file is open in the editor Click on Go Live to start a local web server  You should be able to see the following page:\nHow to use the app Starting a new request  Click on the New Request button Select the request type  Delete will anonymize a user\u0026rsquo;s PII Export will export a user\u0026rsquo;s activities within Genesys Cloud. The exported file is a set of CSV and JSON files. Update will update a user\u0026rsquo;s details throughout Genesys Cloud.   Enter a name, an address, a phone number or an email address. Only one of these fields is required but you can enter as many as you like to find the right person. Click on Search Click on Select and Submit after you have identified the correct person   If the request succeeds, you should now see the following:   Requests typically take between 24h and 48h to be processed. You can check the status of your request by refreshing the page.  Next, go to Embedding the app to embed this app in your own Genesys Cloud organization.\n"
+},
+{
+	"uri": "/020-getting-started/30_third.html",
+	"title": "Embedding the app",
+	"tags": [],
+	"description": "",
+	"content": "Publishing your app The app is now ready to be used within Genesys Cloud. There are several ways to use it:\nUsing localhost This is what you have been doing so far. You can keep the app running locally and use it to your Genesys Cloud organization however it will only work from your own computer.\nUsing your own domain You can copy the source code in your own web server(s). Make sure the app can be reached via a publicly accessible URL (e.g. https://mydomain.com/gdpr-requests).\nGithub pages You can host this static web site using Github Pages if you have a Github Account. This is practical because it will give you a free https URL The credentials in static/js/genesyscloud.js are not critical as it requires anyone who uses it to also enter their username and password to authenticate.\nA sample page is available here. In this case, the Authorized redirect URI is https://purecloudgdprrequests.github.io/index.html\nEmbed the app in your organization To embed your web site directly inside PureCloud, you need to create a new Integration\n Go to Admin/Integrations and click on +Integrations on the top right to add a new client application In the Details tab:  Enter a name for the new client application   In the Configuration tab, enter the following:  Application URL: The full path to your site home page (e.g. https://purecloudgdprrequests.github.io) Application Type: widget Application Category: (leave empty) Iframe Sandbox Options: allow-scripts,allow-same-origin,allow-forms,allow-modals (default value) Group Filtering: Select a group of users who can access this client application. You might have to create a new group first in Admin/Groups Click on Save   Go back to the Details tab and click on Active to activate this application  You might need to logout and log back in to view the app inside the Apps section on the left side.\nJump to the Conclusion section to read what you have achieved.\n"
 },
 {
 	"uri": "/090-conclution.html",
 	"title": "Conclusion",
 	"tags": [],
 	"description": "",
-	"content": "Conclusion Congrats! You\u0026rsquo;ve reached the end of today\u0026rsquo;s workshop. Please fill out today\u0026rsquo;s feedback form via this TODO\n "
+	"content": "Conclusion Congrats! You\u0026rsquo;ve reached the end of today\u0026rsquo;s workshop.\nYou have created and deployed a new client application to process GDPR requests.\nPlease fill out today\u0026rsquo;s feedback form via this TODO.\nLimitations  Requests are not sorted by Created Date because each request to the Users API does not take the same amount of time and come back in a random order Some fields do not render properly because an extra API call would be required to get the full value (e.g. shows an id instead of a readable name)  "
 },
 {
 	"uri": "/categories.html",
