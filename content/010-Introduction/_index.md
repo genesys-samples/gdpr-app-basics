@@ -4,17 +4,17 @@ chapter: true
 weight: 10
 ---
 
-# Genesys Workshop Series
+# Genesys Cloud GDPR Client Application
 
 ## Introduction
 
 ### Welcome
 
-In this workshop, you will learn...
+In this workshop, you will learn how to create your a GDPR client application and embed it into your own Genesys Cloud organization.
 
-> This workshop is focused on things one, two and three.
+> This workshop uses existing source code of an application that was previously created to demonstrate GDPR requests.
 
 ### Learning Objectives
-- Master this
-- Configure that
-- Integrate this
+
+- Create a local website to process GDPR requests
+- Embed the application into your Genesys Cloud organization
