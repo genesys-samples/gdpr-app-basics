@@ -1,17 +1,17 @@
 ---
-title: "Genesys Workshop"
+title: "Taller Genesys"
 chapter: true
 weight: 1
 ---
 
-# Genesys Workshop
+# Taller Genesys
 
-### Welcome
+### Bienvenido
 
-In this workshop you will learn to apply your foundational knowledge of [Genesys](https://genesys.com) and master example use cases that demonstrate [Experience as a Service](https://www.genesys.com/experience-as-a-service).
+En este taller aprenderá a aplicar sus conocimientos básicos de [Genesys](https://genesys.com) y a dominar casos de uso de ejemplo que demuestran [Experience as a Service](https://www.genesys.com/experience-as-a-service).
 
-### Learning Objectives
+### Objetivos de aprendizaje
 
-- Setup and configure your environment.
-- Creating users and groups.
-- Configure security.
+- Instalar y configurar su entorno.
+- Crear usuarios y grupos.
+- Configurar la seguridad.

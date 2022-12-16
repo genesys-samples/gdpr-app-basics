@@ -1,13 +1,13 @@
 ---
-title: "Getting Started"
+title: "Para Empezar"
 chapter: true
 weight: 20
 ---
 
-## Getting Started
+## Para Empezar
 
-This is what the app will look like once embedded in your Genesys Cloud organization:
+Este es el aspecto que tendrá la aplicación una vez integrada en su organización Genesys Cloud:
 
 ![Final app](./images/app_final.jpg)
 
-Click on the [First Steps](020-getting-started/10_first.html) to get started.
+Haga clic en [Primeros pasos](020-getting-started/10_first.html) para empezar.

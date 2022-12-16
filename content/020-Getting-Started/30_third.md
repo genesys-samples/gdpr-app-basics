@@ -1,45 +1,45 @@
 ---
-title: "Embedding the app"
+title: "Integrar la aplicación"
 chapter: false
 weight: 30
 ---
 
-## Publishing your app
+## Publicación de la aplicación
 
-The app is now ready to be used within Genesys Cloud. There are several ways to use it:
+La aplicación ya está lista para ser utilizada en Genesys Cloud. Hay varias formas de utilizarla:
 
-### Using localhost
+### Usando localhost
 
-This is what you have been doing so far. You can keep the app running locally and use it to your Genesys Cloud organization however **it will only work from your own computer**.
+Esto es lo que ha estado haciendo hasta ahora. Puede mantener la aplicación ejecutándose localmente y utilizarla en su organización de Genesys Cloud, sin embargo **sólo funcionará desde su propio ordenador**.
 
-### Using your own domain
+### Usando su propio dominio
 
-You can copy the source code in your own web server(s). Make sure the app can be reached via a publicly accessible URL (e.g. `https://mydomain.com/gdpr-requests`).
+Puede copiar el código fuente en su(s) propio(s) servidor(es) web. Asegúrese de que se pueda acceder a la aplicación a través de una URL de acceso público (e.g. `https://mydomain.com/gdpr-requests`).
 
-### Github pages
+### Páginas de Github
 
-You can host this static web site using Github Pages if you have a Github Account. This is practical because it will give you a free `https` URL The credentials in `static/js/genesyscloud.js` are not critical as it requires anyone who uses it to also enter their username and password to authenticate.
+Puede alojar este sitio web estático utilizando las páginas de Github si tiene una cuenta de Github. Esto es práctico porque le dará una URL `https` gratuita. Las credenciales en `static/js/genesyscloud.js` no son críticas, ya que requiere que cualquiera que lo use también ingrese su nombre de usuario y contraseña para autenticarse.
 
-A sample page is available [here](https://github.com/purecloudgdprrequests/purecloudgdprrequests.github.io). In this case, the `Authorized redirect URI` is `https://purecloudgdprrequests.github.io/index.html`
+Una página de muestra está disponible [aquí] (https://github.com/purecloudgdprrequests/purecloudgdprrequests.github.io). En este caso, la 'URI de redirección autorizada' es 'https://purecloudgdprrequests.github.io/index.html'
 
-## Embed the app in your organization
+## Incruste la aplicación en su organización
 
-To embed your web site directly inside PureCloud, you need to create a new `Integration`
+Para incrustar su sitio web directamente dentro de Genesys Cloud, necesita crear una nueva `Integración`
 
-- Go to `Admin/Integrations` and click on `+Integrations` on the top right to add a new client application
-- In the `Details` tab:
-  - Enter a name for the new client application
-- In the `Configuration` tab, enter the following:
-  - Application URL: The full path to your site home page (e.g. [https://purecloudgdprrequests.github.io](https://purecloudgdprrequests.github.io))
-  - Application Type: widget
-  - Application Category: (leave empty)
-  - Iframe Sandbox Options: allow-scripts,allow-same-origin,allow-forms,allow-modals (default value)
-  - Group Filtering: Select a group of users who can access this client application. You might have to create a new group first in `Admin/Groups`
-  - Click on `Save`
-- Go back to the `Details` tab and click on `Active` to activate this application
+- Vaya a `Admin/Integrations` y haga clic en `+Integrations` en la parte superior derecha para añadir una nueva aplicación cliente.
+- En la pestaña "Detalles":
+  - Introduzca un nombre para la nueva aplicación cliente
+- En la pestaña "Configuración", introduzca lo siguiente:
+  - URL de la aplicación: La ruta completa a la página de inicio de su sitio (por ejemplo, [https://purecloudgdprrequests.github.io](https://purecloudgdprrequests.github.io))
+  - Tipo de aplicación: widget
+  - Categoría de la aplicación: (dejar vacío)
+  - Opciones de Iframe Sandbox: allow-scripts,allow-same-origin,allow-forms,allow-modals (valor por defecto)
+  - Filtrado por grupos: Seleccione un grupo de usuarios que puedan acceder a esta aplicación cliente. Puede que tenga que crear un nuevo grupo primero en `Admin/Grupos`.
+  - Haga clic en `Guardar`.
+- Vuelva a la pestaña `Detalles` y haga clic en `Activo` para activar esta aplicación.
 
-You might need to logout and log back in to view the app inside the `Apps` section on the left side.
+Es posible que tengas que cerrar la sesión y volver a iniciarla para ver la aplicación en la sección `Apps` de la izquierda.
 
 ![Embedded app](../images/app_icons.jpg)
 
-Jump to the [Conclusion](../090-Conclution/_index.html) section to read what you have achieved.
+Salta a la sección [Conclusión](../090-Conclution/_index.html) para leer lo que has conseguido.
