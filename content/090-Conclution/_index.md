@@ -1,18 +1,18 @@
 ---
-title: "Conclusión"
+title: "Conclusion"
 chapter: true
 weight: 90
 ---
 
-## Conclusión
+## Conclusion
 
-¡Felicitaciones! Ha llegado al final del taller de hoy.
+Congrats! You've reached the end of today's workshop.
 
-Ha creado e implementado una nueva aplicación cliente para procesar solicitudes de GDPR.
+You have created and deployed a new client application to process GDPR requests.
 
-Complete el formulario de comentarios de hoy a través de este [TODO](TODO).
+Please fill out today's feedback form via this [TODO](TODO).
 
-## Limitaciones
+## Limitations
 
-- Las solicitudes no se ordenan por `Fecha de creación` porque cada solicitud a la API de usuarios no toma la misma cantidad de tiempo y regresa en un orden aleatorio
-- Algunos campos no se representan correctamente porque se requeriría una llamada API adicional para obtener el valor completo (por ejemplo, muestra un `id` en lugar de un nombre legible)
+- Requests are not sorted by `Created Date` because each request to the Users API does not take the same amount of time and come back in a random order
+- Some fields do not render properly because an extra API call would be required to get the full value (e.g. shows an `id` instead of a readable name)

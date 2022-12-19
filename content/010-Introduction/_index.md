@@ -1,20 +1,20 @@
 ---
-title: "Introducción"
+title: "Introduction"
 chapter: true
 weight: 10
 ---
 
-# Aplicación cliente GDPR de Genesys Cloud
+# Genesys Cloud GDPR Client Application
 
-## Introducción
+## Introduction
 
-### Bienvenido
+### Welcome
 
-En este taller, aprenderá a crear una aplicación cliente GDPR e integrarla en su propia organización Genesys Cloud.
+In this workshop, you will learn how to create your a GDPR client application and embed it into your own Genesys Cloud organization.
 
-> Este taller utiliza el código fuente existente de una aplicación que se creó previamente para demostrar las solicitudes de GDPR.
+> This workshop uses existing source code of an application that was previously created to demonstrate GDPR requests.
 
-### Objetivos de aprendizaje
+### Learning Objectives
 
-- Crear un sitio web local para procesar las solicitudes GDPR
-- Integrar la aplicación en su organización de Genesys Cloud
+- Create a local website to process GDPR requests
+- Embed the application into your Genesys Cloud organization
