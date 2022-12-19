@@ -1,4 +1,4 @@
 [submodule "themes/hugo-theme-learn"]
 	path = themes/hugo-theme-learn
-	url = https://github.com/matcornic/hugo-theme-learn.git
+	url = https://github.com/genesys-samples/hugo-theme-learn
 	branch = master
