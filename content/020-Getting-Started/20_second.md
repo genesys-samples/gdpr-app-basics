@@ -1,51 +1,51 @@
 ---
-title: "Update code and Launch the app"
+title: "Actualiza el código e inicia la aplicación"
 chapter: false
 weight: 20
 ---
 
-## Update the app configuration
+## Actualizar la configuración de la aplicación
 
-- Open the `/static/js/genesyscloud.js` file
-- Set the `clientId`, `redirectUrl` and `environment` constants to the values you got from Genesys Cloud earlier, e.g.:
+- Abra el archivo `/static/js/genesyscloud.js`.
+- Establezca las constantes `clientId`, `redirectUrl` y `environment` a los valores que obtuvo de Genesys Cloud anteriormente, por ejemplo:
 
 ```js
 const clientId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
 const redirectUrl = "http://localhost";
-const environment = "mypurecloud.ie"; // Your Genesys Cloud environment (e.g. mypurecloud.com, mypurecloud.de)
+const environment = "mypurecloud.ie"; // Su entorno Genesys Cloud (por ejemplo, mypurecloud.com, mypurecloud.de)
 ```
 
-Find your environment [here](https://developer.genesys.cloud/platform/api/)
+Encuentre su entorno [aquí](https://developer.genesys.cloud/platform/api/)
 
-## Launch the app
+## Iniciar la aplicación
 
-- Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in Visual Studio Code
-- Make sure the `index.html` file is open in the editor
-- Click on `Go Live` to start a local web server
+- Instalar la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en Visual Studio Code
+- Asegúrese de que el archivo `index.html` está abierto en el editor
+- Haga clic en `Go Live` para iniciar un servidor web local
 
-You should be able to see the following page:
+Debería poder ver la siguiente página:
 
 ![First launch](../images/app_first_launch.jpg)
 
-## How to use the app
+## ¿Cómo utilizar la aplicación?
 
-### Starting a new request
+### Iniciar una nueva solicitud
 
-- Click on the `New Request` button
-- Select the request type
-  - `Delete` will anonymize a user's [PII](https://en.wikipedia.org/wiki/Personal_data)
-  - `Export` will export a user's activities within Genesys Cloud. The exported file is a set of CSV and JSON files.
-  - `Update` will update a user's details throughout Genesys Cloud.
-- Enter a name, an address, a phone number or an email address. Only one of these fields is required but you can enter as many as you like to find the right person.
-- Click on `Search`
-- Click on `Select and Submit` after you have identified the correct person
+- Haga clic en el botón `New Request` (Nueva solicitud)
+- Seleccione el tipo de solicitud
+  - `Delete` anonimizará los datos de un usuario [PII](https://en.wikipedia.org/wiki/Personal_data)
+  - `Export` exportará las actividades de un usuario dentro de Genesys Cloud. El archivo exportado es un conjunto de archivos CSV y JSON.
+  - `Update` actualizará los datos de un usuario en todo Genesys Cloud.
+- Introduzca un nombre, una dirección, un número de teléfono o una dirección de correo electrónico. Sólo uno de estos campos es obligatorio, pero puedes introducir tantos como quieras para encontrar a la persona adecuada.
+- Haga clic en `Search`
+- Haga clic en  `Select and Submit` después de haber identificado a la persona correcta
 
 ![Search Subject](../images/app_search_subject.jpg)
 
-- If the request succeeds, you should now see the following:
+- Si la solicitud tiene éxito, debería ver lo siguiente:
 
 ![Searching](../images/app_searching.jpg)
 
-- Requests typically take between 24h and 48h to be processed. You can check the status of your request by refreshing the page.
+- Las solicitudes suelen tardar entre 24 y 48 horas en tramitarse. Puede comprobar el estado de su solicitud actualizando la página.
 
-Next, go to [Embedding the app](30_third.html) to embed this app in your own Genesys Cloud organization.
+A continuación vaya a [Embedding the app](30_third.html) para integrar esta aplicación en su propia organización de Genesys Cloud.
