@@ -1,6 +1,6 @@
-baseURL = "/"
+baseURL = "https://workshop.genesys.com/"
 languageCode = "en-us"
-title = "Genesys Workshops: Your_Workshop_Name"
+title = "GDPR"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "false"
@@ -53,11 +53,13 @@ defaultContentLanguageInSubdir= true
 
 [Languages]
 [Languages.en]
+contentDir = 'content/en-US'
 title = "Documentation for Hugo Learn Theme"
 weight = 1
 languageName = "English"
 
 [Languages.sp]
+contentDir = 'content/es-ES'
 title = "Documentación para el tema Hugo Learn"
 weight = 2
 languageName = "Español"
