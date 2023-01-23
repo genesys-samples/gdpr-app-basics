@@ -64,6 +64,12 @@ title = "Documentación para el tema Hugo Learn"
 weight = 2
 languageName = "Español"
 
+[Languages.pt]
+contentDir = 'content/pt-BR'
+title = "Documentação para Hugo Learn Theme"
+weight = 3
+languageName = "Português"
+
 [[menu.shortcuts]] 
 name = "<i class='fas fa-graduation-cap'></i> Genesys Workshops"
 url = "https://workshop.genesys.com/"
